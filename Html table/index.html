@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Irregular Headers Table Example</title>
+  </head>
+  <body>
+    <h1>HTML Table with Irregular Headers</h1>
+    <table border="2">
+      <thead>
+        <tr>
+          <th rowspan="2" colspan="2">Department</th>
+          <th colspan="6">Quarterly Sales (in s)</th>
+          <th rowspan="2" colspan="2">Annual Total</th>
+        </tr>
+        <tr>
+          <th colspan="2">Q1</th>
+          <th colspan="2">Q2</th>
+          <th colspan="2">Q3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="2" rowspan="2">Electronics</td>
+          <td colspan="2">50,000</td>
+          <td colspan="2">70,000</td>
+          <td colspan="2">65,000</td>
+          <td colspan="2" rowspan="2">225,000</td>
+        </tr>
+        <tr>
+          <td colspan="6">Special Discount Applied</td>
+        </tr>
+        <tr>
+          <td rowspan="3" colspan="2">Clothing</td>
+          <td colspan="2">30,000</td>
+          <td colspan="2">25,000</td>
+          <td colspan="2">40,000</td>
+          <td colspan="2" rowspan="3">135,000</td>
+        </tr>
+        <tr>
+          <td colspan="4">Sales Season Adjustment</td>
+          <td colspan="2">10,000</td>
+        </tr>
+        <tr>
+          <td colspan="6">End-of-year sale boost</td>
+        </tr>
+        <tr>
+          <td colspan="10">
+            <ul>
+              <li>
+                Note: All figures are estimates and subject to final audit
+              </li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
