@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label for="first_name">First name</label>
+      <br />
+      <input
+        type="text"
+        name="FirstName"
+        id="first_name"
+        placeholder="Enter your First name"
+        required
+      />
+
+      <br /><br />
+      <label for="last_name">Last name</label>
+      <br />
+      <input
+        type="text"
+        name="LastName"
+        id="last_name"
+        placeholder="Enter your Last name"
+        required
+      />
+
+      <br /><br />
+
+      <label for="birthDate">Birth date</label>
+      <br />
+      <input type="date" name="BirthDate" id="birthDate" required />
+      <br /><br />
+
+      <label for="age">Age</label>
+      <br />
+      <input
+        type="number"
+        name="Age"
+        id="age"
+        placeholder="Enter your age"
+        min="18"
+        required
+      />
+      <br /><br />
+      <label for="password">Password</label>
+      <br />
+      <input
+        type="password"
+        name="Password"
+        id="password"
+        placeholder="Enter your password"
+        minlength="7"
+        maxlength="16"
+        required
+      />
+      <br /><br />
+      <label for="date">Date</label>
+      <br />
+      <input type="datetime-local" name="date" id="date" />
+
+      <br /><br />
+      <label for="email">E-mail</label>
+      <br />
+      <input
+        type="email"
+        name="Email"
+        id="email"
+        placeholder="Enter your email"
+        required
+      />
+      <br /><br />
+      <input type="submit" />
+    </form>
+  </body>
+</html>
