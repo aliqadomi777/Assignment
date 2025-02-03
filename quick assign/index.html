@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label for="first_name">First name</label>
+      <br />
+      <input
+        type="text"
+        name="second_name"
+        id="first_name"
+        maxlength="16"
+        required
+      />
+      <br /><br />
+      <label for="second_name">Second name</label>
+      <br />
+      <input type="text" name="second_name" id="second_name" maxlength="16" />
+      <br /><br />
+      <label for="family_name">Family name</label>
+      <br />
+      <input
+        type="text"
+        name="family_name"
+        id="family_name"
+        maxlength="16"
+        required
+      />
+      <br /><br />
+      <label for="age">Age</label>
+      <br />
+      <input type="number" name="age" id="age" />
+      <br /><br />
+      <label for="birth_date">Birth date</label>
+      <br />
+      <input type="date" name="birth_date" id="birth_date" max="2025-2-3" />
+      <br /><br />
+      <label for="email">E-mail</label>
+      <br />
+      <input type="email" name="email" id="email" required />
+      <br /><br />
+      <label for="password">Password</label>
+      <br />
+      <input type="password" name="password" id="password" minlength="8" />
+
+      <br /><br />
+      <label for="gender">Gender</label>
+      <br />
+      <input type="radio" name="gender" id="gender" value="1" checked />Male
+      <br />
+      <input type="radio" name="gender" id="gender" value="0" />Female <br />
+
+      <br />
+      <label for="skills">Skills</label>
+      <br />
+      <input
+        type="checkbox"
+        name="skills"
+        id="skills"
+        value="0"
+        checked
+      />Writing
+      <br />
+      <input
+        type="checkbox"
+        name="skills"
+        id="skills"
+        value="1"
+        checked
+      />Speaking
+      <br />
+      <input
+        type="checkbox"
+        name="skills"
+        id="skills"
+        value="2"
+      />Problem-solving
+      <br />
+      <input type="checkbox" name="skills" id="skills" value="3" />Coding
+      <br />
+
+      <input type="checkbox" name="skills" id="skills" value="4" />Programming
+      <br />
+      <br />
+      <label for="country">Country</label>
+      <br />
+      <select name="country" id="country" multiple>
+        <option value="jo">Jordan</option>
+        <option value="pa">Palestine</option>
+        <option value="usa">Usa</option>
+        <option value="egy">Egypt</option>
+      </select>
+      <br />
+      <br />
+      <input type="text" list="country1" name="country1" />
+      <datalist id="country1">
+        <option value="jo">Jordan</option>
+        <option value="pa">Palestine</option>
+        <option value="usa">Usa</option>
+        <option value="egy">Egypt</option>
+      </datalist>
+      <br />
+      <br />
+      <input type="submit" value="Create user" name="" id="" />
+    </form>
+  </body>
+</html>
