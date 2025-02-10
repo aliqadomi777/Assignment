@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main div {
+  border: 2px solid black;
+  padding: 2px;
+  margin: 8px;
+  gap: 10px;
+}
+.main {
+  height: 800px;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-3 {
+  flex: 3;
+}
+.boxes {
+  border: 4px solid red;
+  display: flex;
+
+  font-size: 40px;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.child {
+  border: 1px solid black;
+  flex-basis: 100px;
+  height: 100px;
+}
+
+.all {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(255, 239, 239);
+  height: 50px;
+  font-size: large;
+  flex-wrap: wrap-reverse;
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.button {
+  border: 1px solid orange;
+  border-radius: 20px;
+  background-color: orange;
+  padding: 5px;
+}
+
+a {
+  text-decoration: none;
+}
