@@ -1,0 +1,53 @@
+.items {
+  margin: 5px;
+  background-color: black;
+  height: 100px;
+  width: 100px;
+  flex: 1;
+  flex-basis: 300px;
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+.parent {
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  height: 100vh;
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border: 1px solid black;
+}
+a {
+  text-decoration: none;
+}
+
+.screen {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header {
+  border: 2px solid black;
+  display: flex;
+  flex-wrap: wrap;
+}
+.search {
+  flex-basis: 200px;
+}
+.flex-1 {
+  flex: 1;
+}
