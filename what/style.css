@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #d1d7db;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+.flex-1 {
+  flex: 1;
+}
+
+.flex-8 {
+  flex: 8;
+}
+.flex-15 {
+  flex: 15;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.icon {
+  height: 30px;
+  width: 30px;
+}
+
+.justify-space {
+  justify-content: space-between;
+}
+
+.margin {
+  margin: 4px;
+}
+
+.side {
+  background-color: #202c33;
+  border-right: 1px solid gray;
+  width: 50px;
+}
+
+.chats {
+  background-color: #111b21;
+}
+
+.chat-screen {
+  background-color: #128c7e;
+}
+
+input {
+  margin: 10px;
+  border-radius: 5px;
+  height: 30px;
+  flex: 1;
+  background-color: #202c33;
+}
+.header {
+  flex: 1;
+}
+
+.items-chat {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.items {
+  min-height: 70px;
+  max-height: 70px;
+  margin-right: 4px;
+}
+
+.image {
+  height: 80%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+}
+
+.align {
+  align-items: center;
+}
