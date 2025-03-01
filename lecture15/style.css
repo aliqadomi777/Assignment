@@ -1,0 +1,38 @@
+div {
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+}
+.a {
+  transition: 2s;
+}
+
+.a:hover {
+  width: 100%;
+}
+
+.b {
+  transform: scale(0.5, 0.5) rotate(45deg);
+}
+
+.c {
+  animation: move 2s infinite;
+}
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(100px, 0);
+  }
+  50% {
+    transform: translate(100px, 100px);
+  }
+
+  75% {
+    transform: translate(0, 100px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
