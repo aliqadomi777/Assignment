@@ -15,8 +15,8 @@
 //   return true;
 // }
 
+// console.log(isPalindrome("1000021"));
+
 // function isPalindrome(x) {
 //   return x === x.split("").reverse().join("");
 // }
-
-
