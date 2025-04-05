@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validation Form</title>
+    <script src="script.js" defer></script>
+    <style>
+      p {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form onsubmit="return checkFormInputs()">
+      <input
+        type="text"
+        id="fullname"
+        name="fullname"
+        placeholder="Full Name"
+      />
+      <p id="fullnameError" class="error"></p>
+
+      <input type="email" id="email" name="email" placeholder="Email Address" />
+      <p id="emailError" class="error"></p>
+
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Password"
+      />
+      <p id="passwordError" class="error"></p>
+
+      <input
+        type="password"
+        id="confirmPassword"
+        name="confirmPassword"
+        placeholder="Confirm Password"
+      />
+      <p id="confirmPasswordError" class="error"></p>
+
+      <button type="submit">Save</button>
+    </form>
+  </body>
+</html>
