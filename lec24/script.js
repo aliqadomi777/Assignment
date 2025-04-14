@@ -3,8 +3,6 @@ let str = "";
 let temp = [];
 
 function press(x) {
-  const display = document.getElementById("display");
-
   if (["*", "-", "/", "+"].includes(x)) {
     if (str === "") return;
     temp.push(parseFloat(str));
