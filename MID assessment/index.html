@@ -3,22 +3,157 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mid</title>
+    <title>User Management Dashboard</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <script src="script.js"></script>
   </head>
   <body>
-    <div class="nav nav-tabs">
-      <button class="btn btn-primary nav-link active" onclick="createUser()">
-        Sign in
-      </button>
-      <button class="btn btn-primary nav-link" onclick="preview()">
-        Preview
-      </button>
+    <div class="container">
+      <h1>User Creator</h1>
+
+      <div class="tabs">
+        <button id="add-user-tab" class="tab-btn active">
+          <i class="fas fa-user-plus"></i> Add User
+        </button>
+        <button id="preview-users-tab" class="tab-btn">
+          <i class="fas fa-users"></i> Preview Users
+        </button>
+      </div>
+
+      <div id="add-user-content" class="tab-content active">
+        <h2><i class="fas fa-user-edit"></i> Create New User</h2>
+
+        <form id="user-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter email address"
+                required
+              />
+              <span class="error-message" id="email-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="name"><i class="fas fa-user"></i> Name:</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Enter full name"
+                required
+              />
+              <span class="error-message" id="name-error"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">
+                <i class="fas fa-phone"></i> Phone Number:
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                placeholder="Enter phone number (at least 10 digits)"
+                required
+              />
+              <span class="error-message" id="phone-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="gender">
+                <i class="fas fa-venus-mars"></i> Gender:
+              </label>
+              <select id="gender" required>
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
+              <span class="error-message" id="gender-error"></span>
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="address">
+              <i class="fas fa-map-marker-alt"></i> Address:
+            </label>
+            <textarea
+              id="address"
+              rows="4"
+              placeholder="Enter full address"
+              required
+            ></textarea>
+            <span class="error-message" id="address-error"></span>
+          </div>
+
+          <div class="form-actions">
+            <button type="reset" class="btn btn-secondary">
+              <i class="fas fa-undo"></i> Reset
+            </button>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-save"></i> Add User
+            </button>
+          </div>
+        </form>
+
+        <div id="success-message" class="success-message">
+          <i class="fas fa-check-circle"></i> User added successfully!
+        </div>
+      </div>
+
+      <div id="preview-users-content" class="tab-content">
+        <h2><i class="fas fa-list"></i> User List</h2>
+
+        <div class="controls-bar">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="user-search" placeholder="Search users..." />
+          </div>
+
+          <div class="view-toggle">
+            <button id="table-view-btn" class="btn active">
+              <i class="fas fa-table"></i> Table View
+            </button>
+            <button id="card-view-btn" class="btn">
+              <i class="fas fa-th-large"></i> Card View
+            </button>
+          </div>
+        </div>
+
+        <div id="table-view" class="view active">
+          <table id="users-table">
+            <thead>
+              <tr>
+                <th><i class="fas fa-envelope"></i> Email</th>
+                <th><i class="fas fa-user"></i> Name</th>
+                <th><i class="fas fa-phone"></i> Phone</th>
+                <th><i class="fas fa-venus-mars"></i> Gender</th>
+                <th><i class="fas fa-map-marker-alt"></i> Address</th>
+              </tr>
+            </thead>
+            <tbody id="users-table-body"></tbody>
+          </table>
+          <div id="no-users-table" class="no-data">
+            <i class="fas fa-info-circle"></i> No users added yet. Please add
+            users from the Add User tab.
+          </div>
+        </div>
+
+        <div id="card-view" class="view">
+          <div id="users-cards"></div>
+          <div id="no-users-cards" class="no-data">
+            <i class="fas fa-info-circle"></i> No users added yet. Please add
+            users from the Add User tab.
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
