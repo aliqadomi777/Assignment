@@ -3,48 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog App</title>
-    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Blog web app</title>
+    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <%- include('partials/header') %>
-
-    <main class="container">
+    <%- include("header.ejs") %>
+    <main>
       <div class="posts-container">
-        <h2>Recent Posts</h2>
-
-        <% if (posts.length === 0) { %>
-        <div class="empty-state">
-          <p>No posts yet. <a href="/posts/new">Create your first post!</a></p>
-        </div>
-        <% } else { %> <% posts.forEach(post => { %>
-        <article class="post-card">
-          <h3><%= post.title %></h3>
-          <div class="post-meta">
-            <span class="date"
-              >Posted on: <%= post.createdAt.toLocaleDateString() %></span
-            >
-            <% if (post.updatedAt) { %>
-            <span class="date"
-              >(Updated: <%= post.updatedAt.toLocaleDateString() %>)</span
-            >
-            <% } %>
-          </div>
-          <div class="post-content">
-            <p><%= post.content %></p>
-          </div>
-          <div class="post-actions">
-            <a href="/posts/<%= post.id %>/edit" class="btn btn-edit">Edit</a>
+        <% if (posts && posts.length > 0) { %> <% posts.forEach(post => { %>
+        <div class="post-card">
+          <h2><%= post.title %></h2>
+          <p class="author">By: <%= post.author %></p>
+          <p class="content"><%= post.message %></p>
+          <div class="post-buttons flex row space-between">
+            <a href="/posts/<%= post.id %>/edit" class="button-link">
+              <button class="edit-button">Edit</button>
+            </a>
             <form
               action="/posts/<%= post.id %>/delete"
               method="POST"
-              class="inline-form"
+              class="delete-form"
             >
-              <button type="submit" class="btn btn-delete">Delete</button>
+              <button type="submit" class="delete-button">Delete</button>
             </form>
           </div>
-        </article>
-        <% }) %> <% } %>
+        </div>
+        <% }); %> <% } else { %>
+        <div class="empty-container">
+          <p class="no-posts">No posts yet. Be the first to create one!</p>
+          <a href="/posts/new" class="new-post-link">Create New Post</a>
+        </div>
+        <% } %>
       </div>
     </main>
   </body>
