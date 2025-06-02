@@ -1,0 +1,44 @@
+Assignment Requirements
+1.Create Components
+Build and use the following components:
+
+<App />: Root component
+
+<StudentList />: Receives array of student objects via props
+
+<StudentCard />: Displays single student details and a conditional badge
+
+<AlertButton />: Button that, when clicked, alerts a message
+
+2. Display Array of Student Objects
+In your App.jsx, define this array:
+
+const students = [
+  { id: 1, name: "Sarah Ali", grade: 95 },
+  { id: 2, name: "Omar Tarek", grade: 82 },
+  { id: 3, name: "Lina Haddad", grade: 76 }
+];
+
+Pass this array to <StudentList students={students} />.
+
+3. Render List Using .map()
+In the <StudentList /> component:
+Use .map() to generate a list of <StudentCard /> components.
+Pass name and grade as props to each card.
+
+4. Conditional Rendering
+In the <StudentCard /> component:
+Display the student name and grade.
+If grade >= 85, show this badge: "Excellent Student"
+Otherwise, show this badge: "Needs Improvement"
+Use a ternary operator inside JSX for this logic.
+
+5. Click Event
+In each <StudentCard />, include an <AlertButton /> component with this feature:
+When clicked, it should alert a message like:
+Student: Sarah Ali — Grade: 95
+You must pass the alert message from the parent component to <AlertButton /> using props.
+
+Bonus
+Add a footer <Footer /> component that simply displays the total number of students.
+Use students.length and pass it as a prop.
